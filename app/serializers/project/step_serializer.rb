@@ -1,3 +1,3 @@
 class Project::StepSerializer < ActiveModel::Serializer
-  attributes :id, :content, :done
+  attributes :id, :project_id, :content, :done
 end

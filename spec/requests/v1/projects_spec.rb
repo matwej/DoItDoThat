@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Projects V1", type: :request do
+RSpec.describe "V1::Project", type: :request do
   describe "GET /projects" do
     it "works! (now write some real specs)" do
       get '/v1/projects'

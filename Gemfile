@@ -30,6 +30,8 @@ group :development, :test do
 
   # Use Factory Girl for generating random test data
   gem 'factory_girl_rails'
+
+  gem 'rails-controller-testing'
 end
 
 group :development do

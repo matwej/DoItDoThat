@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :project_step, class: 'Project::Step' do
-    content "MyText"
+    content "content"
     done false
+    project
   end
 end

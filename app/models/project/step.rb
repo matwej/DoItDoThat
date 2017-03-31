@@ -1,3 +1,5 @@
 class Project::Step < ApplicationRecord
-  validates :content, presence: true
+  belongs_to :project
+
+  validates :content, :project_id, presence: true
 end
