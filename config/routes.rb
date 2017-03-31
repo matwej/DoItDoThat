@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   namespace :v1 do
-    resources :projects
+    resources :project
+    namespace :project do
+      resources :steps
+    end
   end
 end
