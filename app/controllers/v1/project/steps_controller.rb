@@ -16,9 +16,10 @@ class V1::Project::StepsController < ApplicationController
   # POST /project/steps
   def create
     @project_step = ::Project::Step.new(project_step_params)
+    @project_step.project_id = params[:project_id]
 
     if @project_step.save
-      render json: @project_step, status: :created, location: @project_step
+      render json: @project_step, status: :created, location: v1_project_step_url(@project_step.project_id, @project_step.id)
     else
       render json: @project_step.errors, status: :unprocessable_entity
     end

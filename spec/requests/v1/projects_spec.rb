@@ -34,6 +34,7 @@ RSpec.describe "V1::Project", type: :request do
       patch "/v1/projects/#{project.id}", params: {project: {title: ''}}
       expect(response).to have_http_status(422)
       expect(response.content_type).to eq Mime[:json]
+      expect(project.reload.title).not_to be_nil
     end
   end
 end
