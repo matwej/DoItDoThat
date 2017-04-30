@@ -3,7 +3,7 @@ class V1::Project::StepsController < ApplicationController
 
   # GET /project/steps
   def index
-    @project_steps = ::Project::Step.where(project_id: params[:project_id])
+    @project_steps = ::Project::Step.where(project_id: params[:project_id]).order(created_at: :asc)
 
     render json: @project_steps
   end
